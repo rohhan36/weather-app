@@ -37,21 +37,21 @@ async function checkWeather(city){
             folder = "moon";
         }
 
-        let weatherSrc = "";
+        let weatherSrc = " "https://raw.githubusercontent.com/rohhan36/weather-app/main/weather_icons/";
         if(data.weather[0].main == 'Clear')
-            weatherSrc = `weather_icons/${folder}/clear.png`;  
+            weatherSrc += `${folder}/clear.png`;  
 
         else if(data.weather[0].main == 'Clouds')
-            weatherSrc = `weather_icons/${folder}/cloudy.png`;
+            weatherSrc += `${folder}/cloudy.png`;
 
         else if(data.weather[0].main == 'Mist' || data.weather[0].main == 'Haze' || data.weather[0].main == 'Smoke')
-            weatherSrc = `weather_icons/${folder}/mist.png`;
+            weatherSrc += `${folder}/mist.png`;
 
         else if(data.weather[0].main == 'Rain')
-            weatherSrc = `weather_icons/${folder}/rain.png`;
+            weatherSrc += `${folder}/rain.png`;
 
         else if(data.weather[0].main == 'Drizzle')
-            weatherSrc = `weather_icons/${folder}/drizzle.png`;
+            weatherSrc += `${folder}/drizzle.png`;
 
 
         document.querySelector(".weather-icon").src = weatherSrc;
